@@ -37,7 +37,7 @@ public class Demo1 {
     }
 
     public static void main(String[] args) {
-        int a[] = {2,1,3,1,3,1,2,1,3,2};
+        int a[] = {1,4,1,6};
 
         Demo1.fun2(a);
     }
