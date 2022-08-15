@@ -64,21 +64,24 @@ public class Solution11 {
             M[i][j] = -1;
             record[i][j] = 1;
             process(M,i+1,j,record);
-        }else if(i-1>0 && M[i-1][j]>M[i][j]){
+        }
+        if(i-1>0 && M[i-1][j]>M[i][j]){
             M[i][j] = -1;
             record[i][j] = 1;
             process(M,i-1,j,record);
-        }else if(j-1>0 && M[i][j-1]>M[i][j]){
+        }
+        if(j-1>0 && M[i][j-1]>M[i][j]){
             M[i][j] = -1;
             record[i][j] = 1;
             process(M,i,j-1,record);
-        }else if(j+1<col && M[i][j+1]>M[i][j]){
+        }
+        if(j+1<col && M[i][j+1]>M[i][j]){
             M[i][j] = -1;
             record[i][j] = 1;
             process(M,i,j+1,record);
-        }else{
-            return;
         }
+
+        return;
 
     }
 
