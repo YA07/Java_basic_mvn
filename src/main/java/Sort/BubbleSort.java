@@ -4,9 +4,21 @@ import java.util.Arrays;
 
 public class BubbleSort {
     public static void main(String[] args) {
-        int a[] = {49,38,65,97,76,13,27,49};
-        sort(a);
+        int a[] = {2,0,2,1,1,0};
+        sortColors(a);
+        System.out.println(Arrays.toString(a));
+    }
 
+    public static void sortColors(int[] nums) {
+        for(int i=0;i<nums.length;i++){
+            for(int j=nums.length-1;j>0;j--){
+                if(nums[j-1]<nums[j]){
+                    int temp = nums[j-1];
+                    nums[j-1] = nums[j];
+                    nums[j] = temp;
+                }
+            }
+        }
     }
 
     public static void sort(int a[]){
